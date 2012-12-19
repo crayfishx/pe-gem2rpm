@@ -5,7 +5,8 @@ This provides a covenient wrapper for creating RPMs from GEMs using gem2rpm, but
 ## Quick start
 
 Make sure your .rpmmacros file contains:
-    %_topdir <location of this repo>
+
+`%_topdir <location of this repo>`
 
 To build packages...
 
