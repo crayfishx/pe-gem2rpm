@@ -14,8 +14,7 @@ Make sure your .rpmmacros file contains:
 
 To build packages...
 
-    /opt/puppet/bin/gem install gem2rpm
-    cd SPECS
+    cd ./SPECS
     ./autobuild.sh <gemname>
 
 
