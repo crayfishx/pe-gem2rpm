@@ -4,6 +4,10 @@ This provides a covenient wrapper for creating RPMs from GEMs using gem2rpm, but
 
 ## Quick start
 
+Install gem2rpm using PE's gem
+
+`/opt/puppet/bin/gem install gem2rpm`
+
 Make sure your .rpmmacros file contains:
 
 `%_topdir <location of this repo>`
