@@ -11,6 +11,6 @@ cd ../SOURCES
 SOURCE=`ls ${PACKAGE}-* | tail -1`
 
 cd ../SPECS
-/opt/puppet/bin/gem2rpm -t pe-template.spec ../SOURCES/${SOURCE} > ${PACKAGE}.spec
+/opt/puppet/bin/gem2rpm --no-doc -t pe-template.spec ../SOURCES/${SOURCE} > ${PACKAGE}.spec
 rpmbuild -bb ${PACKAGE}.spec
 
