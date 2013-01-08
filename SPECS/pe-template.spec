@@ -15,7 +15,7 @@ Source: %{rbname}-%{version}.gem
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 Requires: pe-ruby <%= spec.required_ruby_version %>
 Requires: pe-rubygems >= <%= Gem::RubyGemsVersion %>
-<% for d in spec.dependencies -%>
+<% for d in spec.runtime_dependencies -%>
 <% for req in d.requirement -%>
 Requires: pe-rubygem-<%= d.name %> <%= req %>
 <% end -%>
@@ -24,6 +24,7 @@ BuildRequires: pe-ruby <%= spec.required_ruby_version %>
 BuildRequires: pe-rubygems >= <%= Gem::RubyGemsVersion %>
 BuildArch: noarch
 Provides: ruby(<%= spec.name.capitalize %>) = %{version}
+AutoReqProv: no
 
 %define gemdir <%= Gem.dir %>
 %define gembuilddir %{buildroot}%{gemdir}
